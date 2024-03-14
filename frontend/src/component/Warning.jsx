@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Warning({title,linkto,to}){
     return (
-        <div className="py-2 text-sm flex justify-center">
+        <div className="py-2 flex text-sm justify-center">
             <div>
                 {title} 
             </div>
