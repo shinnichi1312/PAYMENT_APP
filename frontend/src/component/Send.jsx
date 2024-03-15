@@ -22,7 +22,7 @@ export default function SendMoney() {
                         </div>
                     </div>
                     <InputBox title={"Amount (in Rs.)"} placeholder={"Enter Amount"}></InputBox>
-                    <button class="my-2 justify-center rounded-md text-sm font-medium ring-offset-background transition-colors h-10 px-4 py-2 w-full bg-green-500 text-white">
+                    <button class="my-2 justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus:outline-none focus:ring-4 focus:ring-green-300 h-10 px-4 py-2 w-full hover:bg-green-600 bg-green-500 text-white">
                         Initiate Transfer
                     </button>
                 </div>

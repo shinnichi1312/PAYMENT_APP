@@ -1,23 +1,24 @@
 import { useState } from "react"
 import { Button } from "./Button"
+import { Link } from "react-router-dom";
 
 export const Users = () => {
     // Replace with backend call
     const [users, setUsers] = useState([{
-        firstName: "Harkirat",
-        lastName: "Singh",
+        firstName: "AYUSH",
+        lastName: "PATEL",
         _id: 1
     },{
-        firstName: "Harkirat",
-        lastName: "Singh",
+        firstName: "AYUSH",
+        lastName: "PATEL",
         _id: 1
     },{
-        firstName: "Harkirat",
-        lastName: "Singh",
+        firstName: "AYUSH",
+        lastName: "PATEL",
         _id: 1
     },{
-        firstName: "Harkirat",
-        lastName: "Singh",
+        firstName: "AYUSH",
+        lastName: "PATEL",
         _id: 1
     }]);
 
@@ -50,7 +51,7 @@ function User({user}) {
         </div>
 
         <div className="flex flex-col justify-center h-ful">
-            <Button title={"Send Money"} />
+            <Link to={"/send"}><Button title={"Send Money"} /></Link>
         </div>
     </div>
 }
