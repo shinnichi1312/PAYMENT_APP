@@ -5,6 +5,7 @@ import InputBox from "../component/InputBox"
 import SubHeading from "../component/SubHeading"
 import Warning from "../component/Warning"
 import axios from "axios"
+import { Link } from "react-router-dom"
 
 export const Signup = () => {
 
@@ -31,15 +32,16 @@ export const Signup = () => {
                         setPassword(e.target.value)
                     }} title={"Password"} placeholder={"123456"}></InputBox>
                     <div className="pt-4">
-                        <Button onClick={async () => {
+                        <Link to={(password == "")?NaN:"/dashboard"}><Button onClick={async () => {
                             const response = await axios.post("http://localhost:3000/api/v1/user/signup",{
                                 firstname : firstname,
                                 lastname : lastname,
                                 username : username,
                                 password : password
                             })
+                            localStorage.setItem("token","Bearer "+response.data.userId)
                             alert(response.data.message)
-                        }} title={"Sign Up"}></Button>
+                        }} title={"Sign Up"}></Button></Link>
                     </div>
                     <Warning title={"Already have an account"} linkto={"Sign in"} to={"/signin"}></Warning>
                 </div>
